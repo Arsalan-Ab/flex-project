@@ -1,6 +1,6 @@
 .logo {
     height: 3.25rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 
 
@@ -29,13 +29,13 @@
             background-color: var(--color-grey-light-3);
         }
 
-        &::-webkit-input-placeholder{
+        &::-webkit-input-placeholder {
             font-weight: 100;
             background-color: var(--color-grey-light-3);
         }
     }
 
-    &__input:focus + &__button{
+    &__input:focus+&__button {
         background-color: var(--color-grey-light-3);
     }
 
@@ -43,11 +43,11 @@
         border: none;
         background-color: var(--color-grey-light-2);
 
-        &:focus{
+        &:focus {
             outline: none;
         }
 
-        &:active{
+        &:active {
             transform: translateY(2px);
         }
     }
@@ -61,21 +61,53 @@
 
 
 .user-nav {
-    &__icon-box {}
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+
+    &>* {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display:flex;
+        align-items: center;
+    }
+
+    &>*:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &__icon-box {
+        position: relative;
+    }
 
     &__icon {
         height: 2.25rem;
         width: 2.25rem;
+        fill: var(--color-grey-dark-2);
     }
 
-    &__notification {}
+    &__notification {
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: white;
+        position: absolute;
+        top:1.5rem;
+        right: 1.1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__user {}
 
     &__user-photo {
         height: 3.75rem;
         border-radius: 50%;
+        margin-right: 1rem;
     }
-
-    &__user-name {}
 }
